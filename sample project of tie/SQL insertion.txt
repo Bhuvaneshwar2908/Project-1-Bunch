@@ -1,0 +1,16 @@
+
+
+data insertion for login tabe
+
+INSERT INTO login table values('raj','raj@45');
+INSERT INTO login table values('ravi','ravi@45');
+
+
+
+
+
+data insertion for login table
+
+
+INSERT INTO register table values('kumar','raj','raj@gmail.com',900007654,'raj@45','raj@45');
+INSERT INTO register table values('Raj','ravi','ravi@gmail.com',906757654,'ravi@45','ravi@45');

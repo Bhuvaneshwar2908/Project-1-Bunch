@@ -1,0 +1,63 @@
+#(backend)#
+in django---->view.py
+
+
+from django.shortcuts import render,redirect
+from django.http import HttpResponse
+from django.forms import inlineformset_factory
+from django.contrib.auth.forms import UserCreationForm
+
+from django.contrib.auth import authenticate,login,register,logout
+
+from django.contrib import messages
+
+from django.contrib.auth.decorators import login_required
+
+from .models import *
+
+
+
+def home(requests)
+return render(requests,'login.html')
+
+
+def login(requests):
+if requests.method=='POST':
+username=requests.POST['username']
+password=requests.POST['password']
+user auth.authenticate(username=username,password=password)
+if user is not None:
+auth.login(requests,user)
+print("user login done")
+return redirect('/')
+else:
+return render(requests,'login.html')
+
+def register(requests):
+if request.method == 'POST':
+fullname = request.POST['fullname'] 
+username = request.POST['username']
+email = request.POST['email']
+phone number=request.POST['phone number']
+password = request.POST['password']
+confirmpassword = request.POST['confirmpassword']
+gender = request.POST['gender']
+
+user=user.objects.create_user(fullname=fullname,username=username,email=email,phonenumber=phonenumber,password=password,confirmpassword=password,gender=gender)
+
+print('successfully registered')
+return redirect('/')
+else:
+return render(request,'register.html')
+
+
+
+
+
+
+
+def logout(request):
+logout(request)
+return redirect('home')
+
+
